@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+
+@keyframes degrade-animado {
+    0%{
+        background-position-x: 0%;
+    }
+    100%{
+        background-position-x: 100%;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+}
+
+body{
+    background: #121212;
+    background-image: linear-gradient(to left, rgb(0, 0, 0), rgb(15, 15, 15), rgb(22, 22, 22),rgb(24, 24, 24),rgb(27, 27, 27),rgb(39, 39, 39), rgb(44, 44, 44), rgb(51, 51, 51));
+    background-size: cover;
+    animation: degrade-animado 10s infinite alternate;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    min-height: 80vh;
+    padding: 10%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+@keyframes colors {
+    0%{
+        filter:hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+
+.circle {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(1, 145, 255);
+    clip-path: circle(10% at top right);
+    z-index: 900;
+}
+
+header {
+    background-color: #040404;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-width: 100vw;
+    max-width: 100vw; /* Defina o valor máximo em pixels ou em outra unidade de medida que você preferir */
+    padding: 2% 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 99;
+}
+
+header .nav ul {
+    position: relative;
+    display: flex;
+}
+
+header .nav li {
+    list-style: none;
+}
+
+header .nav li a {
+    color: white;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 2vw; /* Tamanho de fonte responsivo */
+    margin-right: 5vw; /* Margem responsiva */
+    border-bottom: 0.15vw solid transparent; /* Adiciona uma borda transparente na parte inferior por padrão */
+    transition: border-bottom-color 0.4s ease; /* Adiciona uma transição suave para a mudança de cor da borda */
+}
+
+header .nav li a:hover {
+    border-bottom-color: #ffffff; /* Muda a cor da borda para amarelo (#ffcc00) ao passar o mouse sobre o item da lista */
+}
+
+
+header .nav li:last-child {
+    margin-right: 0;
+}
+
+
+@media (max-width: 768px) {
+    header .nav li a {
+        font-size: 2vw; /* Ajuste de tamanho de fonte para telas menores */
+        margin-right: 5vw; /* Ajuste de margem para telas menores */
+    }
+
+    section {
+        padding: 20px; /* Ajuste do padding para telas menores */
+    }
+}
+
+.container {
+    position: fixed;
+    top: 0;
+    right: 1%;
+    text-align: center;
+    z-index: 901;
+}
+
+.principal {
+    font-size: 5vw; /* Tamanho do texto em relação à largura da viewport */
+    font-weight: 500;
+    color: white;
+    padding-right: 2%; /* Espaçamento à direita em relação à largura da viewport */
+    font-family: 'Caveat', cursive;
+}
+
+
+.container2{
+    position: absolute;
+    top: 30%;
+    left: 0;
+    right: 0;
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: center;
+}
+
+.texto{
+    color: white;
+    font-size: 1.75vw;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    gap: 15px;
+    justify-content: center;
+    align-items: flex-start; /* Ajuste o alinhamento no eixo vertical */
+    align-content: center;
+    width: 100%;
+    height: auto; /* Alterado para altura automática para acomodar diferentes alturas de conteúdo */
+}
+
+.content > a {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+    padding: 0 0;
+    text-decoration: none;
+    height: 27vw; /* Defina uma altura fixa para todos os cards */
+}
+
+a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+h2.title {
+    color: #0083d4;
+    font-size: 1.5vw;
+}
+
+.secondText {
+    font-size: 0.9vw;
+    color: #040404;
+}
+
+.topCard {
+    padding: 1vw;
+    padding-bottom: 0px;
+    height: 1vw; /* Defina uma altura fixa para .topCard */
+}
+
+.MangaCard {
+    background: #ffffff;
+    box-shadow: 0vw 2px 23px #4751883e;
+    border-radius: 2vw;
+    width: 15vw;
+    margin: 1vw;
+}
+
+.mediaCardBerserk {
+    background: url(https://upload.wikimedia.org/wikipedia/en/d/db/GutsBerserk.PNG) center/cover;
+    height: 20vw;
+    width: 100%;
+    border-bottom-right-radius: 2vw;
+    border-bottom-left-radius: 2vw;
+}
+
+
+.mediaCardBlackCover{
+    background: url(https://www.manga-news.com/public/images/vols/black-clover-1-kaze.jpg) center/cover;
+    height: 20vw;
+    width: 100%;
+    border-bottom-right-radius: 2vw;
+    border-bottom-left-radius: 2vw;
+}
+
+.mediaCardBleach{
+    background: url(https://m.media-amazon.com/images/I/61X5Tp3zUrL._AC_UF1000,1000_QL80_.jpg) center/cover;
+    height: 20vw;
+    width: 100%;
+    border-bottom-right-radius: 2vw;
+    border-bottom-left-radius: 2vw;
+}
+
+.mediaCardBlueLock{
+    background: url(https://m.media-amazon.com/images/I/61cBSZXxXaS._AC_UF1000,1000_QL80_.jpg) center/cover;
+    height: 20vw;
+    width: 100%;
+    border-bottom-right-radius: 2vw;
+    border-bottom-left-radius: 2vw;
+}
+
+.mediaCardBokuNoHero{
+    background: url(https://m.media-amazon.com/images/I/71bELfIWTDL._SY466_.jpg) center/cover;
+    height: 20vw;
+    width: 100%;
+    border-bottom-right-radius: 2vw;
+    border-bottom-left-radius: 2vw;
+}
+
+.mediaCardChainsawM{
+    background: url(https://acdn.mitiendanube.com/stores/973/807/products/121-53645417b37331daab16644368628642-640-0.jpg) center/cover;
+    height: 20vw;
+    width: 100%;
+    border-bottom-right-radius: 2vw;
+    border-bottom-left-radius: 2vw;
+}
+
+.mediaCardDrStone{
+    background: url(https://m.media-amazon.com/images/I/81P3esYKtyL._AC_UF1000,1000_QL80_.jpg) center/cover;
+    height: 20vw;
+    width: 100%;
+    border-bottom-right-radius: 2vw;
+    border-bottom-left-radius: 2vw;
+}
+
+.mediaCardFireForce{
+    background: url(https://m.media-amazon.com/images/I/81oCwXtMrfL._AC_UF1000,1000_QL80_.jpg) center/cover;
+    height: 20vw;
+    width: 100%;
+    border-bottom-right-radius: 2vw;
+    border-bottom-left-radius: 2vw;
+}
+
+.mediaCardHaikyuu{
+    background: url(https://m.media-amazon.com/images/I/61AU5L7LvRL._AC_UF1000,1000_QL80_.jpg) center/cover;
+    height: 20vw;
+    width: 100%;
+    border-bottom-right-radius: 2vw;
+    border-bottom-left-radius: 2vw;
+}
+
+.mediaCardNagatoro{
+    background: url(https://mangalivre.com.br/wp-content/uploads/2021/04/nagatoro-san2-tyHjwP.jpeg) center/cover;
+    height: 20vw;
+    width: 100%;
+    border-bottom-right-radius: 2vw;
+    border-bottom-left-radius: 2vw;
+}
+
+.mediaCardJujutsu{
+    background: url(https://m.media-amazon.com/images/I/71PBZJaSmAL._AC_UF1000,1000_QL80_.jpg) center/cover;
+    height: 20vw;
+    width: 100%;
+    border-bottom-right-radius: 2vw;
+    border-bottom-left-radius: 2vw;
+}
+
+.mediaCardKagurabachi{
+    background: url(https://i.pinimg.com/originals/8c/bc/7e/8cbc7e824bed6cc70578623f7e595772.jpg) center/cover;
+    height: 20vw;
+    width: 100%;
+    border-bottom-right-radius: 2vw;
+    border-bottom-left-radius: 2vw;
+} 
+
+.mediaCardKimetsu{
+    background: url(https://cdn.awsli.com.br/2054/2054144/produto/215408592/screenshot_1-zvajxj09v6.jpg) center/cover;
+    height: 20vw;
+    width: 100%;
+    border-bottom-right-radius: 2vw;
+    border-bottom-left-radius: 2vw;
+}
+
+.mediaCardNaruto{
+    background: url(https://m.media-amazon.com/images/I/91ytHaROPiL._AC_UF1000,1000_QL80_.jpg) center/cover;
+    height: 20vw;
+    width: 100%;
+    border-bottom-right-radius: 2vw;
+    border-bottom-left-radius: 2vw;
+}
+
+.mediaCardOnePiece{
+    background: url(https://cdn.kobo.com/book-images/46aa2e72-cba5-4388-a790-51d19eb8c1ae/1200/1200/False/one-piece-vol-100.jpg) center/cover;
+    height: 20vw;
+    width: 100%;
+    border-bottom-right-radius: 2vw;
+    border-bottom-left-radius: 2vw;
+}
+
+.mediaCardOnePunch{
+    background: url(https://cdn.kobo.com/book-images/450e2cbf-1a40-4dbb-999b-44bac947214c/1200/1200/False/one-punch-man-vol-23.jpg) center/cover;
+    height: 20vw;
+    width: 100%;
+    border-bottom-right-radius: 2vw;
+    border-bottom-left-radius: 2vw;
+}
+
+.mediaCardOyasumiPunPun{
+    background: url(https://m.media-amazon.com/images/I/51EQ5jMPsHL._AC_UF1000,1000_QL80_.jpg) center/cover;
+    height: 20vw;
+    width: 100%;
+    border-bottom-right-radius: 2vw;
+    border-bottom-left-radius: 2vw;
+}
+
+.mediaCardShuumatsu{
+    background: url(https://cdn.slimeread.com/usuarios_covers/7392/Shuumatsu%20no%20Valkyrie%20Webtoon/19_06_.jpeg) center/cover;
+    height: 20vw;
+    width: 100%;
+    border-bottom-right-radius: 2vw;
+    border-bottom-left-radius: 2vw;
+}
+
+.mediaCardUndeadUnluck{
+    background: url(https://m.media-amazon.com/images/I/71kdAmLjF6L._AC_UF1000,1000_QL80_.jpg) center/cover;
+    height: 20vw;
+    width: 100%;
+    border-bottom-right-radius: 2vw;
+    border-bottom-left-radius: 2vw;
+}
+
+.mediaCardVinlandSaga{
+    background: url(https://img.lermanga.org/V/vinland-saga/capa.jpg) center/cover;
+    height: 20vw;
+    width: 100%;
+    border-bottom-right-radius: 2vw;
+    border-bottom-left-radius: 2vw;
+}

@@ -91,11 +91,11 @@ header .nav li:last-child {
 @media (max-width: 768px) {
     header .nav li a {
         font-size: 2vw;
-        margin-right: 5vw;
+        margin-right: 4vw;
     }
 
     section {
-        padding: 20px;
+        padding: 2vw;
     }
 }
 

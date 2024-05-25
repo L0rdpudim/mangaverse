@@ -2,17 +2,11 @@
 function searchChapter() {
     var inputVal = document.getElementById("chapter-search").value.trim().toLowerCase();
 
-    // Verifica se o input contém apenas números
-    if (!/^\d+$/.test(inputVal)) {
-        alert("Por favor, insira apenas números no campo de pesquisa.");
-        return;
-    }
-
     var chapters = document.querySelectorAll('.chapter-list a');
 
     if (inputVal === "") {
         // Se o campo de pesquisa estiver vazio, exibe todos os capítulos
-        chapters.forEach(function (chapter) {
+        chapters.forEach(function(chapter) {
             chapter.style.display = 'block';
         });
     } else {

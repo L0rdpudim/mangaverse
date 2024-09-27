@@ -112,6 +112,25 @@ header .nav li:last-child {
     }
 }
 
+#search-form {
+    margin-left: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -40vw; 
+    display: flex;
+    align-items: center;
+}
+
+#search-input {
+    padding: 5px;
+    font-size: 16px;
+    background: none;
+    border: none;
+    color: #ddd;
+    font-size: 1vw;
+}
+
 .container {
     position: fixed;
     top: 0;
@@ -268,14 +287,6 @@ h2.title {
     border-bottom-left-radius: 2vw;
 }
 
-.mediaCardNagatoro{
-    background: url(https://mangalivre.com.br/wp-content/uploads/2021/04/nagatoro-san2-tyHjwP.jpeg) center/cover;
-    height: 20vw;
-    width: 100%;
-    border-bottom-right-radius: 2vw;
-    border-bottom-left-radius: 2vw;
-}
-
 .mediaCardJujutsu{
     background: url(https://m.media-amazon.com/images/I/71PBZJaSmAL._AC_UF1000,1000_QL80_.jpg) center/cover;
     height: 20vw;
@@ -300,6 +311,13 @@ h2.title {
     border-bottom-left-radius: 2vw;
 }
 
+.mediaCardMobPsycho{
+    background: url(https://m.media-amazon.com/images/I/71+Jd3-oU2L._AC_UF1000,1000_QL80_.jpg) center/cover;
+    height: 20vw;
+    width: 100%;
+    border-bottom-right-radius: 2vw;
+    border-bottom-left-radius: 2vw;
+}
 .mediaCardNaruto{
     background: url(https://m.media-amazon.com/images/I/91ytHaROPiL._AC_UF1000,1000_QL80_.jpg) center/cover;
     height: 20vw;

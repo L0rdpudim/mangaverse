@@ -19,3 +19,26 @@ function filterMangas() {
         }
     }
 }
+
+
+function filterByGenre(genre) {
+    // Converte o gênero selecionado para minúsculas
+    const selectedGenre = genre.toLowerCase();
+    
+    // Seleciona todos os cartões de mangás
+    const mangaCards = document.getElementsByClassName('MangaCard');
+
+    for (let i = 0; i < mangaCards.length; i++) {
+        // Obtém o texto dos gêneros do mangá atual e converte para minúsculas
+        const genres = mangaCards[i].getElementsByClassName('secondText')[0].innerText.toLowerCase();
+        
+        // Verifica se o gênero do mangá inclui o gênero selecionado
+        if (genres.includes(selectedGenre)) {
+            // Exibe o cartão do mangá
+            mangaCards[i].style.display = "";
+        } else {
+            // Oculta o cartão do mangá
+            mangaCards[i].style.display = "none";
+        }
+    }
+}

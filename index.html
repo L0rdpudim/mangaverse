@@ -16,6 +16,19 @@
                 <ul>
                     <li><a href="index.html">Início</a></li>
                     <li><a href="Novidades/Novidades.html">Novidades</a></li>
+                    <li class="dropdown">
+                        <a href="index.html" class="dropbtn">Gêneros</a>
+                        <div class="dropdown-content">
+                            <a href="#" onclick="filterByGenre('Ação')">Ação</a>
+                            <a href="#" onclick="filterByGenre('Aventura')">Aventura</a>
+                            <a href="#" onclick="filterByGenre('Comédia')">Comédia</a>
+                            <a href="#" onclick="filterByGenre('Drama')">Drama</a>
+                            <a href="#" onclick="filterByGenre('Fantasia')">Fantasia</a>
+                            <a href="#" onclick="filterByGenre('Seinen')">Seinen</a>
+                            <a href="#" onclick="filterByGenre('Shounen')">Shounen</a>
+                            <a href="#" onclick="filterByGenre('Sobrenatural')">Sobrenatural</a>
+                            <!-- Adicionar mais gêneros conforme necessário -->
+                        </div>
                     <li><a href="https://github.com/L0rdpudim?tab=repositories">Projetos</a></li>
                     <li><form id="search-form">
                         <input type="text" id="search-input" placeholder="Pesquisar mangá..." onkeyup="filterMangas()">
@@ -104,7 +117,7 @@
         <a href="Haikyuu/Capítulos.html" class="MangaCard">
             <div class="topCard">
                 <h2 class="title">Haikyuu!!</h2>
-                <span class="secondText">Comédia, Drama, Escolar, Esportes, Shounen</span>
+                <span class="secondText">Comédia, Escolar, Esportes, Shounen</span>
             </div>
             <div class="mediaCardHaikyuu"></div>            
         </a>          

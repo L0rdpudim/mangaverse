@@ -197,23 +197,23 @@ header .nav li:last-child {
 .content {
     display: flex;
     flex-wrap: wrap;
-    padding: 10px;
-    gap: 15px;
+    padding: 1vw;
+    gap: 0.5vw;
     justify-content: center;
-    align-items: flex-start; /* Ajuste o alinhamento no eixo vertical */
+    align-items: flex-start;
     align-content: center;
     width: 100%;
-    height: auto; /* Alterado para altura automática para acomodar diferentes alturas de conteúdo */
+    height: auto;
 }
 
 .content > a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 5px;
-    padding: 0 0;
     text-decoration: none;
-    height: 27vw; /* Defina uma altura fixa para todos os cards */
+    width: 15vw;
+    height: 27vw;
+    flex-shrink: 0;
 }
 
 a:visited {
@@ -224,17 +224,25 @@ a:visited {
 h2.title {
     color: #0083d4;
     font-size: 1.5vw;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .secondText {
     font-size: 0.9vw;
     color: #040404;
+    white-space: normal;  /* Permite que o texto quebre em várias linhas */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
 }
 
 .topCard {
     padding: 1vw;
-    padding-bottom: 0px;
-    height: 1vw; /* Defina uma altura fixa para .topCard */
+    padding-bottom: 0;
+    height: auto;
 }
 
 .MangaCard {
@@ -243,7 +251,24 @@ h2.title {
     border-radius: 2vw;
     width: 15vw;
     margin: 1vw;
+    position: relative;
+    flex-shrink: 0;
+    overflow: hidden;
 }
+
+.MangaCard .rating {
+    position: absolute;
+    top: calc(0.2vw + 7vw);  /* Calcula a posição com base na altura da imagem */
+    right: 0.2vw;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 3px;
+    border-radius: 5px;
+    font-size: 1vw;
+    font-weight: bold;
+    z-index: 10;
+}
+
 
 .mediaCardBerserk {
     background: url(https://upload.wikimedia.org/wikipedia/en/d/db/GutsBerserk.PNG) center/cover;

@@ -160,6 +160,22 @@ header .nav li:last-child {
     transform: translateY(-5px); /* Move para cima ao passar o mouse sobre ela */
 }
 
+.aviso{
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: center;
+    top: 75%;
+    color: white;
+    font-size: 1.15vw;
+}
+
+.ImagemAviso{
+    height: 2vw;
+    width: 2vw;
+}
 
 .principal {
     font-size: 5vw;

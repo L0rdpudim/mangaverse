@@ -17,7 +17,7 @@ function mostrarOcultarBotaoEOpacidade() {
     }
 }
 
-// Função para rolar suavemente ao topo da página
+// Função para rolar ao topo da página
 function voltarAoTopo() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;

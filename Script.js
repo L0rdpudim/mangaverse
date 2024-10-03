@@ -1,3 +1,4 @@
+// FILTRAR PELO NOME DO MANGÁ
 function filterMangas() {
      // Pega o valor digitado no campo de pesquisa e converte para minúsculas
     const input = document.getElementById('search-input').value.toLowerCase();
@@ -20,7 +21,7 @@ function filterMangas() {
     }
 }
 
-
+// FILTRAR PELO GÊNERO DO MANGÁ
 function filterByGenre(genre) {
     // Converte o gênero selecionado para minúsculas
     const selectedGenre = genre.toLowerCase();

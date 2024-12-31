@@ -208,3 +208,23 @@ header .nav li:last-child {
     background-color: #0056b3;
 }
 
+#modoLeitura {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: white;
+    text-align: center;
+}
+
+#modoLeitura label {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+#modoLeitura select {
+    font-size: 1rem;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}

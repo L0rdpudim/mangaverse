@@ -7,7 +7,7 @@
     <script src="../Leitura.js"></script>
     <title>MangáVerse Berserk 1</title>
 </head>
-<body>
+<body onload="inicializarModoLeitura()">
     <section>
         <div class="circle"></div>
         <header onscroll="NavbarTransparente()" id="OpacNav">
@@ -36,53 +36,146 @@
     </div>
 
     <button onclick="voltarAoTopo()" id="btnTopo" title="Voltar ao Topo">
-    <img src="../elementos/ArrowUp.png">
+        <img src="../elementos/ArrowUp.png">
     </button>
 
-    <div class="paginas">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag1.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag2.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag3.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag4.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag5.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag6.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag7.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag8.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag9.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag10.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag11.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag12.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag13.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag14.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag15.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag16.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag17.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag18.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag19.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag20.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag21.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag22.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag23.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag24.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag25.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag26.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag27.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag28.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag29.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag30.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag31.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag32.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag33.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag34.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag35.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag36.jpg">
+    <div id="modoLeitura">
+        <label for="seletorModo">Modo de Leitura:</label>
+        <select id="seletorModo" onchange="alterarModoLeitura(event)">
+            <option value="padrao">Padrão</option>
+            <option value="unico">Página Única</option>
+        </select>
     </div>
-    
+
+    <div id="paginas" class="paginas modo-padrao">
+        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag1.jpg" id="imagemAtual" onclick="navegarPagina(event)">
+    </div>
+
     <div id="botoesContainer">
         <a href="Berserk0.html" class="botao">Capítulo Anterior</a>
         <a href="Capítulos.html" class="botao">Todos os Capítulos</a>
         <a href="Berserk2.html" class="botao">Próximo Capítulo</a>
     </div>
 
+    <script>
+        let modoAtual = 'padrao';
+        let paginas = [
+            "https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag1.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag2.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag3.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag4.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag5.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag6.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag7.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag8.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag9.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag10.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag11.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag12.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag13.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag14.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag15.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag16.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag17.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag18.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag19.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag20.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag21.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag22.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag23.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag24.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag25.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag26.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag27.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag28.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag29.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag30.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag31.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag32.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag33.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag34.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag35.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/cap01pag36.jpg"
+        ];
+        let paginaAtual = 0;
+
+        function inicializarModoLeitura() {
+            const seletorModo = document.getElementById('seletorModo');
+            seletorModo.value = 'padrao';
+            atualizarModoPadrao();
+        }
+
+        function alterarModoLeitura(event) {
+            const novoModo = event.target.value;
+            if (novoModo === 'unico') {
+                atualizarModoUnico();
+            } else {
+                atualizarModoPadrao();
+            }
+        }
+
+        function atualizarModoPadrao() {
+            const paginasDiv = document.getElementById('paginas');
+            paginasDiv.className = 'paginas modo-padrao';
+            paginasDiv.innerHTML = `
+                ${paginas.map(src => `<img src="${src}">`).join('')}
+            `;
+            modoAtual = 'padrao';
+            document.removeEventListener('keydown', controlarSetas);
+        }
+
+        function atualizarModoUnico() {
+            const paginasDiv = document.getElementById('paginas');
+            paginasDiv.className = 'paginas modo-unico';
+            paginasDiv.innerHTML = `
+                <img src="${paginas[paginaAtual]}" id="imagemAtual" onclick="navegarPagina(event)">
+            `;
+            modoAtual = 'unico';
+            document.addEventListener('keydown', controlarSetas);
+        }
+
+        function navegarPagina(event) {
+            const largura = event.target.offsetWidth;
+            const x = event.offsetX;
+
+            if (x > largura / 2) {
+                avancarPagina();
+            } else {
+                voltarPagina();
+            }
+        }
+
+        function avancarPagina() {
+            if (paginaAtual < paginas.length - 1) {
+                paginaAtual++;
+                atualizarImagem();
+            }
+        }
+
+        function voltarPagina() {
+            if (paginaAtual > 0) {
+                paginaAtual--;
+                atualizarImagem();
+            }
+        }
+
+        function atualizarImagem() {
+            const imagemAtual = document.getElementById('imagemAtual');
+            if (imagemAtual) {
+                imagemAtual.src = paginas[paginaAtual];
+            }
+        }
+
+        function controlarSetas(event) {
+            if (modoAtual === 'unico') {
+                if (event.key === 'ArrowRight') {
+                    avancarPagina();
+                } else if (event.key === 'ArrowLeft') {
+                    voltarPagina();
+                }
+            }
+        }
+    </script>
+    
 </body>
 </html>

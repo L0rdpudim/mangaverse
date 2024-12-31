@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../Leitura.css">
-    <script src="../Leitura.js"></script>
+    <script src="../Leitura.js" defer></script>
     <title>MangáVerse Berserk -16</title>
 </head>
-<body>
+<body onload="inicializarModoLeitura()">
     <section>
         <div class="circle"></div>
         <header onscroll="NavbarTransparente()" id="OpacNav">
@@ -36,105 +36,197 @@
     </div>
 
     <button onclick="voltarAoTopo()" id="btnTopo" title="Voltar ao Topo">
-    <img src="../elementos/ArrowUp.png">
+        <img src="../elementos/ArrowUp.png">
     </button>
 
-    <div class="paginas">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/000-Capa.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-003.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-005.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-006-07.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-008.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-009.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-010.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-011.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-012.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-013.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-014.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-015.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-016.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-017.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-018.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-019.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-020-021.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-022.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-023.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-024.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-025.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-026.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-027.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-028.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-029.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-030.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-031.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-032.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-033.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-034.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-035.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-036.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-037.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-038.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-039.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-040.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-041.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-042.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-043.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-044.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-045.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-046.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-047.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-048.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-049.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-050.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-051.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-052.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-053.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-054.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-055.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-056.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-057.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-058-059.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-060.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-061.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-062.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-063.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-064.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-065.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-066.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-067.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-068.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-069.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-070.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-071.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-072.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-073.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-074.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-075.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-076.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-077.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-078.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-079.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-080.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-081.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-082.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-083.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-084-085.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-086.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-087.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-088.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-089.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-090.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-091.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-092.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-093.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-094.jpg">
+    <div id="modoLeitura">
+        <label for="seletorModo">Modo de Leitura:</label>
+        <select id="seletorModo" onchange="alterarModoLeitura(event)">
+            <option value="padrao">Padrão</option>
+            <option value="unico">Página Única</option>
+        </select>
     </div>
-    
+
+    <div id="paginas" class="paginas modo-padrao">
+        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/000-Capa.jpg" id="imagemAtual" onclick="navegarPagina(event)">
+    </div>
+
     <div id="botoesContainer">
         <a class="botaoInativo">Capítulo Anterior</a>
         <a href="Capítulos.html" class="botao">Todos os Capítulos</a>
         <a href="Berserk-15.html" class="botao">Próximo Capítulo</a>
     </div>
 
+    <script>
+        let modoAtual = 'padrao';
+        let paginas = [
+            "https://mangaonline.biz/wp-content/uploads/2022/09/000-Capa.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-003.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-005.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-006-07.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-008.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-009.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-010.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-011.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-012.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-013.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-014.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-015.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-016.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-017.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-018.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-019.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-020-021.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-022.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-023.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-024.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-025.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-026.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-027.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-028.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-029.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-030.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-031.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-032.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-033.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-034.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-035.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-036.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-037.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-038.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-039.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-040.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-041.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-042.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-043.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-044.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-045.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-046.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-047.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-048.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-049.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-050.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-051.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-052.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-053.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-054.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-055.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-056.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-057.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-058-059.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-060.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-061.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-062.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-063.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-064.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-065.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-066.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-067.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-068.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-069.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-070.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-071.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-072.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-073.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-074.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-075.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-076.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-077.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-078.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-079.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-080.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-081.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-082.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-083.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-084-085.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-086.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-087.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-088.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-089.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-090.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-091.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-092.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-093.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/Berserk-01-094.jpg"
+        ];
+        let paginaAtual = 0;
+
+        function inicializarModoLeitura() {
+            const seletorModo = document.getElementById('seletorModo');
+            seletorModo.value = 'padrao';
+            atualizarModoPadrao();
+        }
+
+        function alterarModoLeitura(event) {
+            const novoModo = event.target.value;
+            if (novoModo === 'unico') {
+                atualizarModoUnico();
+            } else {
+                atualizarModoPadrao();
+            }
+        }
+
+        function atualizarModoPadrao() {
+            const paginasDiv = document.getElementById('paginas');
+            paginasDiv.className = 'paginas modo-padrao';
+            paginasDiv.innerHTML = `
+                ${paginas.map(src => `<img src="${src}">`).join('')}
+            `;
+            modoAtual = 'padrao';
+            document.removeEventListener('keydown', controlarSetas);
+        }
+
+        function atualizarModoUnico() {
+            const paginasDiv = document.getElementById('paginas');
+            paginasDiv.className = 'paginas modo-unico';
+            paginasDiv.innerHTML = `
+                <img src="${paginas[paginaAtual]}" id="imagemAtual" onclick="navegarPagina(event)">
+            `;
+            modoAtual = 'unico';
+            document.addEventListener('keydown', controlarSetas);
+        }
+
+        function navegarPagina(event) {
+            const largura = event.target.offsetWidth;
+            const x = event.offsetX;
+
+            if (x > largura / 2) {
+                avancarPagina();
+            } else {
+                voltarPagina();
+            }
+        }
+
+        function avancarPagina() {
+            if (paginaAtual < paginas.length - 1) {
+                paginaAtual++;
+                atualizarImagem();
+            }
+        }
+
+        function voltarPagina() {
+            if (paginaAtual > 0) {
+                paginaAtual--;
+                atualizarImagem();
+            }
+        }
+
+        function atualizarImagem() {
+            const imagemAtual = document.getElementById('imagemAtual');
+            if (imagemAtual) {
+                imagemAtual.src = paginas[paginaAtual];
+            }
+        }
+
+        function controlarSetas(event) {
+            if (modoAtual === 'unico') {
+                if (event.key === 'ArrowRight') {
+                    avancarPagina();
+                } else if (event.key === 'ArrowLeft') {
+                    voltarPagina();
+                }
+            }
+        }
+    </script>
 </body>
 </html>

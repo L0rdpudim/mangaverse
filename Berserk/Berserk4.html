@@ -7,7 +7,7 @@
     <script src="../Leitura.js"></script>
     <title>MangáVerse Berserk 4</title>
 </head>
-<body>
+<body onload="inicializarModoLeitura()">
     <section>
         <div class="circle"></div>
         <header onscroll="NavbarTransparente()" id="OpacNav">
@@ -36,37 +36,130 @@
     </div>
 
     <button onclick="voltarAoTopo()" id="btnTopo" title="Voltar ao Topo">
-    <img src="../elementos/ArrowUp.png">
+        <img src="../elementos/ArrowUp.png">
     </button>
 
-    <div class="paginas">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/1-2.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/2-2.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/3-2.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/4-2.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/5-2.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/6-2.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/7-2.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/8-2.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/9-2.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/10-23.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/11-21.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/12-20.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/13-20.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/14-20.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/15-17.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/16-16.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/17-15.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/18-10.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/19-4.jpg">
-        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/20-2.jpg">
+    <div id="modoLeitura">
+        <label for="seletorModo">Modo de Leitura:</label>
+        <select id="seletorModo" onchange="alterarModoLeitura(event)">
+            <option value="padrao">Padrão</option>
+            <option value="unico">Página Única</option>
+        </select>
     </div>
-    
+
+    <div id="paginas" class="paginas modo-padrao">
+        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/1-2.jpg" id="imagemAtual" onclick="navegarPagina(event)">
+    </div>
+
     <div id="botoesContainer">
         <a href="Berserk3.html" class="botao">Capítulo Anterior</a>
         <a href="Capítulos.html" class="botao">Todos os Capítulos</a>
         <a href="Berserk5.html" class="botao">Próximo Capítulo</a>
     </div>
+
+    <script>
+        let modoAtual = 'padrao';
+        let paginas = [
+            "https://mangaonline.biz/wp-content/uploads/2022/09/1-2.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/2-2.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/3-2.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/4-2.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/5-2.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/6-2.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/7-2.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/8-2.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/9-2.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/10-23.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/11-21.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/12-20.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/13-20.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/14-20.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/15-17.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/16-16.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/17-15.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/18-10.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/19-4.jpg",
+            "https://mangaonline.biz/wp-content/uploads/2022/09/20-2.jpg"
+        ];
+        let paginaAtual = 0;
+
+        function inicializarModoLeitura() {
+            const seletorModo = document.getElementById('seletorModo');
+            seletorModo.value = 'padrao';
+            atualizarModoPadrao();
+        }
+
+        function alterarModoLeitura(event) {
+            const novoModo = event.target.value;
+            if (novoModo === 'unico') {
+                atualizarModoUnico();
+            } else {
+                atualizarModoPadrao();
+            }
+        }
+
+        function atualizarModoPadrao() {
+            const paginasDiv = document.getElementById('paginas');
+            paginasDiv.className = 'paginas modo-padrao';
+            paginasDiv.innerHTML = `
+                ${paginas.map(src => `<img src="${src}">`).join('')}
+            `;
+            modoAtual = 'padrao';
+            document.removeEventListener('keydown', controlarSetas);
+        }
+
+        function atualizarModoUnico() {
+            const paginasDiv = document.getElementById('paginas');
+            paginasDiv.className = 'paginas modo-unico';
+            paginasDiv.innerHTML = `
+                <img src="${paginas[paginaAtual]}" id="imagemAtual" onclick="navegarPagina(event)">
+            `;
+            modoAtual = 'unico';
+            document.addEventListener('keydown', controlarSetas);
+        }
+
+        function navegarPagina(event) {
+            const largura = event.target.offsetWidth;
+            const x = event.offsetX;
+
+            if (x > largura / 2) {
+                avancarPagina();
+            } else {
+                voltarPagina();
+            }
+        }
+
+        function avancarPagina() {
+            if (paginaAtual < paginas.length - 1) {
+                paginaAtual++;
+                atualizarImagem();
+            }
+        }
+
+        function voltarPagina() {
+            if (paginaAtual > 0) {
+                paginaAtual--;
+                atualizarImagem();
+            }
+        }
+
+        function atualizarImagem() {
+            const imagemAtual = document.getElementById('imagemAtual');
+            if (imagemAtual) {
+                imagemAtual.src = paginas[paginaAtual];
+            }
+        }
+
+        function controlarSetas(event) {
+            if (modoAtual === 'unico') {
+                if (event.key === 'ArrowRight') {
+                    avancarPagina();
+                } else if (event.key === 'ArrowLeft') {
+                    voltarPagina();
+                }
+            }
+        }
+    </script>
 
 </body>
 </html>

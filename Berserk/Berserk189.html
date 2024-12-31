@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../Leitura.css">
+    <script src="../Leitura.js"></script>
+    <title>MangáVerse Berserk 189</title>
+</head>
+<body onload="inicializarModoLeitura()">
+    <section>
+        <div class="circle"></div>
+        <header onscroll="NavbarTransparente()" id="OpacNav">
+            <nav class="nav">
+                <ul>
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="../Novidades/Novidades.html">Novidades</a></li>
+                    <li><a href="https://github.com/L0rdpudim?tab=repositories">Projetos</a></li>              
+                </ul>
+            </nav>
+        </header>
+        <div>
+            <div class="container">
+                <h2 class="principal">MV</h2>
+            </div>
+            <div class="container2">
+                <p class="titulo">Berserk 189</p>
+            </div>
+        </div>
+    </section>
+
+    <div id="botoesContainer">
+        <a href="Berserk188.html" class="botao">Capítulo Anterior</a>
+        <a href="Capítulos.html" class="botao">Todos os Capítulos</a>
+        <a href="Berserk190.html" class="botao">Próximo Capítulo</a>
+    </div>
+
+    <button onclick="voltarAoTopo()" id="btnTopo" title="Voltar ao Topo">
+        <img src="../elementos/ArrowUp.png">
+    </button>
+
+    <div id="modoLeitura">
+        <label for="seletorModo">Modo de Leitura:</label>
+        <select id="seletorModo" onchange="alterarModoLeitura(event)">
+            <option value="padrao">Padrão</option>
+            <option value="unico">Página Única</option>
+        </select>
+    </div>
+
+    <div id="paginas" class="paginas modo-padrao">
+        <img src="" id="imagemAtual" onclick="navegarPagina(event)">
+    </div>
+
+    <div class="paginas">
+        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/205_01.jpg">
+        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/205_02.jpg">
+        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/205_03.jpg">
+        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/205_04.jpg">
+        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/205_05.jpg">
+        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/205_06.jpg">
+        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/205_07.jpg">
+        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/205_08.jpg">
+        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/205_09.jpg">
+        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/205_10.jpg">
+        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/205_11.jpg">
+        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/205_12.jpg">
+        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/205_13.jpg">
+        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/205_14.jpg">
+        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/205_15.jpg">
+        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/205_16.jpg">
+        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/205_17.jpg">
+        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/205_18.jpg">
+        <img src="https://mangaonline.biz/wp-content/uploads/2022/09/205_19.jpg">
+    </div>
+    
+    <div id="botoesContainer">
+        <a href="Berserk188.html" class="botao">Capítulo Anterior</a>
+        <a href="Capítulos.html" class="botao">Todos os Capítulos</a>
+        <a href="Berserk190.html" class="botao">Próximo Capítulo</a>
+    </div>
+
+</body>
+</html>

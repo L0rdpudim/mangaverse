@@ -72,14 +72,14 @@ header .nav li a {
     display: inline-block;
     text-decoration: none;
     font-weight: 500;
-    font-size: 2vw; /* Tamanho de fonte responsivo */
-    margin-right: 5vw; /* Margem responsiva */
-    border-bottom: 0.15vw solid transparent; /* Adiciona uma borda transparente na parte inferior por padrão */
-    transition: border-bottom-color 0.4s ease; /* Adiciona uma transição suave para a mudança de cor da borda */
+    font-size: 2vw;
+    margin-right: 5vw;
+    border-bottom: 0.15vw solid transparent;
+    transition: border-bottom-color 0.4s ease; /* transição suave p mudança de cor da borda */
 }
 
 header .nav li a:hover {
-    border-bottom-color: #ffffff; /* Muda a cor da borda para amarelo (#ffcc00) ao passar o mouse sobre o item da lista */
+    border-bottom-color: #ffffff; /* Muda a cor da borda para amarelo ao passar o mouse sobre */
 }
 
 
@@ -107,25 +107,57 @@ header .nav li:last-child {
     z-index: 901;
 }
 
-.container2{
-    position: absolute;
+.container2 {
+    position: relative;
     top: 50%;
     left: 0;
     right: 0;
     padding-left: 10%;
     padding-right: 10%;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    
 }
+
 
 .titulo{
     color: white;
     font-size: 3vw;
 }
 
+.texto {
+    font-size: 1.5vw;
+    white-space: nowrap;
+    text-align: center;
+    display: inline-block;
+    max-width: 100%;
+    text-align: center;
+}
+
+.texto strong {
+    font-size: 1em;
+    color: rgb(1, 145, 255);
+}
+
+
+.novidades-lista {
+    color: white;
+    list-style-type: disc; /* Adiciona bolinhas na lista */
+    padding-left: 1vw;
+    font-size: 1.2vw;
+}
+
+.novidades-lista li {
+    margin-bottom: 1vw;
+}
+
 .principal {
-    font-size: 5vw; /* Tamanho do texto em relação à largura da viewport */
+    font-size: 5vw;
     font-weight: 500;
     color: white;
-    padding-right: 2%; /* Espaçamento à direita em relação à largura da viewport */
+    padding-right: 2%;
     font-family: 'Caveat', cursive;
 }

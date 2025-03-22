@@ -10,6 +10,7 @@
 
 body{
     background: #151515;
+    overflow: auto;
 }
 
 section {
@@ -118,10 +119,8 @@ header .nav li:last-child {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
-    
+    min-height: 100vh; /* Expandir conforme necessário */
 }
-
 
 .titulo{
     color: white;
